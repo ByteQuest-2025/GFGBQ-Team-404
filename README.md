@@ -8,10 +8,10 @@
 🌐 **Deployed Application:** 
 
 ### 🎥 **Video Demonstration**
-📹 **Demo Video:** 
+📹 **Demo Video:** https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view?usp=sharing
 
 ### 📊 **Presentation**
-📄 **Project Presentation (PPT):** 
+📄 **Project Presentation (PPT):** https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view?usp=sharing
 
 ### 👥 **Team 404**
 - Naga Gayathri Upadhyayula
