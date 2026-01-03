@@ -24,3 +24,4 @@ Sentinel is an AI-powered, browser-based application that monitors phone calls i
 - Call Analysis Report - Downloadable summary after each call
 - Elder-Friendly UI - Large fonts, clear warnings, simple language
 
+**Tech Stack**
