@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel - Real-Time Call Protection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen p-4">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-4 gap-6">
+            
+            <!-- Main Content -->
+            <div class="lg:col-span-3 space-y-6">
+                
+                <!-- Header -->
+                <div class="text-center pt-6">
+                    <div class="flex items-center justify-center gap-3 mb-3">
+                        <span class="text-5xl">🛡️</span>
+                        <h1 class="text-5xl font-bold">Sentinel</h1>
+                    </div>
+                    <p class="text-slate-300 text-xl">AI-Powered Call Protection</p>
+                    <p class="text-slate-400 text-sm mt-2">Pattern Recognition + Google Gemini</p>
+                </div>
+
+                <!-- Status & Emergency -->
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+                        <div class="flex items-center gap-3">
+                            <div id="statusDot" class="w-4 h-4 rounded-full bg-gray-500"></div>
+                            <span id="statusText" class="text-lg">Not listening</span>
+                        </div>
+                        <p id="micStatus" class="text-sm text-slate-400 mt-2">Click Start</p>
+                        <p id="duration" class="text-xs text-slate-500 mt-1">Duration: 0:00</p>
+                    </div>
+
+                    <button id="emergencyBtn" class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-lg font-bold text-2xl py-6 disabled:opacity-50" disabled>
+                        🚨 EMERGENCY<br/>
+                        <span class="text-base">End Call</span>
+                    </button>
+                </div>
+
+                <!-- AI Analyzing -->
+                <div id="aiAnalyzing" class="hidden bg-purple-900/30 border border-purple-500 rounded-lg p-3 flex items-center gap-3">
+                    <div class="w-5 h-5 border-2 border-purple-400 border-t-transparent rounded-full animate-spin"></div>
+                    <span class="text-purple-200 text-sm font-semibold">🧠 AI analyzing...</span>
+                </div>
+
+                <!-- Risk Meter -->
+                <div id="riskMeter" class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-3xl font-bold">Risk Level</h2>
+                        <div class="text-right">
+                            <span id="riskPercent" class="text-3xl font-bold text-green-400">0%</span>
+                            <p id="verdict" class="text-lg font-bold text-green-400">Safe</p>
+                        </div>
+                    </div>
+                    
+                    <div class="h-10 bg-slate-700 rounded-full overflow-hidden mb-3">
+                        <div id="riskBar" class="h-full bg-gradient-to-r from-green-500 to-green-600 transition-all duration-500" style="width: 0%"></div>
+                    </div>
+
+                    <div id="warning" class="hidden bg-red-900/50 border-2 border-red-500 rounded-lg p-4 mt-4">
+                        <div class="flex items-center gap-3">
+                            <span class="text-4xl animate-pulse">⚠️</span>
+                            <div>
+                                <p class="font-bold text-2xl text-red-300">HIGH RISK SCAM</p>
+                                <p class="text-red-200 mt-1">End call immediately</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="flex gap-4">
+                    <button id="toggleBtn" class="flex-1 py-8 rounded-xl font-bold text-2xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
+                        🎤 Start
+                    </button>
+                    <button id="resetBtn" class="px-8 bg-slate-700 hover:bg-slate-600 rounded-xl text-3xl">🔄</button>
+                    <button id="demoBtn" class="px-8 bg-purple-700 hover:bg-purple-600 rounded-xl text-3xl">⚡</button>
+                </div>
+
+                <!-- Demo -->
+                <div id="demoSection" class="hidden bg-slate-800 rounded-xl p-4 border border-slate-700">
+                    <h3 class="text-white font-bold mb-3">Test Scenarios</h3>
+                    <div class="space-y-2">
+                        <button class="demo w-full text-left bg-slate-700 hover:bg-slate-600 p-3 rounded-lg text-sm" data-text="Hello, this is officer Johnson from the IRS. Your account will be suspended immediately if you don't provide your social security number right now.">
+                            <span class="text-red-400 font-bold">95%</span> - IRS scam
+                        </button>
+                        <button class="demo w-full text-left bg-slate-700 hover:bg-slate-600 p-3 rounded-lg text-sm" data-text="Your bank account has been frozen. Share your OTP and CVV within 30 minutes to avoid legal action.">
+                            <span class="text-red-400 font-bold">88%</span> - Bank fraud
+                        </button>
+                        <button class="demo w-full text-left bg-slate-700 hover:bg-slate-600 p-3 rounded-lg text-sm" data-text="Tech support here. We detected a virus. Download TeamViewer urgently.">
+                            <span class="text-red-400 font-bold">75%</span> - Tech support
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Alerts -->
+                <div id="alertsBox" class="hidden bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <span>⚠️</span> Threats
+                    </h2>
+                    <div id="alertsList" class="space-y-3"></div>
+                </div>
+
+                <!-- Transcript -->
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <span>📞</span> Transcript
+                    </h2>
+                    <div class="bg-slate-900 rounded-lg p-4 min-h-[200px] max-h-[400px] overflow-y-auto">
+                        <p id="transcript" class="text-slate-500 italic">Click Start</p>
+                    </div>
+                </div>
+
+                <!-- AI Insights -->
+                <div id="aiBox" class="hidden bg-purple-900/20 border border-purple-500 rounded-xl p-4">
+                    <h2 class="text-xl font-bold mb-2 text-purple-300">🤖 AI Analysis</h2>
+                    <div id="aiContent" class="text-slate-300"></div>
+                </div>
+
+                <!-- Call Summary -->
+                <div id="summaryBox" class="hidden bg-gradient-to-r from-purple-900/50 to-blue-900/50 rounded-xl p-6 border-2 border-purple-500">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <span>📊</span> Call Summary
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-slate-800/50 rounded-lg p-4">
+                            <p class="text-slate-400 text-sm">Duration</p>
+                            <p id="sumDur" class="text-2xl font-bold">0:00</p>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-lg p-4">
+                            <p class="text-slate-400 text-sm">Threats</p>
+                            <p id="sumThreats" class="text-2xl font-bold text-red-400">0</p>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-lg p-4">
+                            <p class="text-slate-400 text-sm">Final Risk</p>
+                            <p id="sumRisk" class="text-2xl font-bold text-green-400">Low</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-slate-800/50 rounded-lg p-4">
+                        <p class="text-white font-bold mb-2">🎯 Recommendation:</p>
+                        <p id="sumRec" class="text-slate-300"></p>
+                    </div>
+                    <button id="downloadBtn" class="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-bold">
+                        📥 Download
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1 space-y-6">
+                
+                <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">
+                    <h3 class="text-xl font-bold mb-4">📚 Tactics</h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="bg-slate-900 rounded p-3">
+                            <p class="text-yellow-400 font-bold">⚡ Urgency</p>
+                            <p class="text-slate-300">Act now!</p>
+                        </div>
+                        <div class="bg-slate-900 rounded p-3">
+                            <p class="text-purple-400 font-bold">👤 Fake ID</p>
+                            <p class="text-slate-300">IRS, bank</p>
+                        </div>
+                        <div class="bg-slate-900 rounded p-3">
+                            <p class="text-red-400 font-bold">💰 Pay</p>
+                            <p class="text-slate-300">Gift cards</p>
+                        </div>
+                        <div class="bg-slate-900 rounded p-3">
+                            <p class="text-orange-400 font-bold">🔐 Info</p>
+                            <p class="text-slate-300">SSN, OTP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-green-900/30 rounded-xl p-6 border-2 border-green-500">
+                    <h3 class="text-xl font-bold mb-4">✅ High Risk?</h3>
+                    <ol class="space-y-2 text-sm list-decimal list-inside">
+                        <li class="font-bold">Hang up</li>
+                        <li>Don't share</li>
+                        <li>Report FTC</li>
+                        <li>Block number</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
