@@ -90,14 +90,14 @@ Sentinel is an AI-powered, browser-based application that monitors phone calls i
 
 ## 🔒 Privacy-First Design
 
-- ✅ **Zero Data Persistence** - Nothing is stored or saved
-- ✅ **No Backend Servers** - All processing happens in your browser
-- ✅ **No Database Storage** - No cloud uploads or remote storage
-- ✅ **No localStorage or Cookies** - No tracking of any kind
-- ✅ **All Processing In-Browser** - Your data never leaves your device
-- ✅ **Temporary State Only** - All data cleared when you stop detection
-- ✅ **No Recording** - Audio is analyzed in real-time, never recorded
-- ✅ **Open Source** - Fully transparent and auditable code
+- **Zero Data Persistence** - Nothing is stored or saved
+- **No Backend Servers** - All processing happens in your browser
+- **No Database Storage** - No cloud uploads or remote storage
+- **No localStorage or Cookies** - No tracking of any kind
+- **All Processing In-Browser** - Your data never leaves your device
+- **Temporary State Only** - All data cleared when you stop detection
+- **No Recording** - Audio is analyzed in real-time, never recorded
+- **Open Source** - Fully transparent and auditable code
 
 ## 🌟 Why Sentinel?
 
@@ -239,12 +239,12 @@ Deploy the `dist/` folder to any static hosting service.
 
 ## 🌟 Key Highlights
 
-- ✅ **100% Frontend** - No server, database, or backend needed
-- ✅ **Privacy-First** - Zero data persistence or tracking
-- ✅ **Real-Time** - Instant detection as conversation happens
-- ✅ **Explainable** - Every alert shows exactly what was detected
-- ✅ **Fast** - <2ms detection time per transcript update
-- ✅ **Free** - No API costs with Web Speech API
+- **100% Frontend** - No server, database, or backend needed
+- **Privacy-First** - Zero data persistence or tracking
+- **Real-Time** - Instant detection as conversation happens
+- **Explainable** - Every alert shows exactly what was detected
+- **Fast** - <2ms detection time per transcript update
+- **Free** - No API costs with Web Speech API
 
 ## 🎯 Use Cases
 
