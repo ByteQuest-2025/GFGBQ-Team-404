@@ -11,6 +11,16 @@ Sentinel is an intelligent, real-time audio analysis platform designed to protec
 
 **Protection Gap:** Most current tools offer post transaction analysis, which works after the damage is done, leaving users unprotected during the actual call.
 
-## Key Features
+### Solution Overview
+Sentinel is an AI-powered, browser-based application that monitors phone calls in real-time and alerts users to potential scams before they fall victim.
 
-## Tech Stack
+**Key Features**
+- Real-Time Transcription - Converts speech to text instantly using Web Speech API
+- AI-Powered Detection - Identifies scam patterns using pattern matching & optional AI (Google Gemini)
+- Visual Risk Meter - Shows threat level from 0-100% with color coding
+- Instant Alerts - Displays specific warnings with confidence scores
+- Emergency Protection - One-click "End Call & Get Help" button
+- Educational Sidebar - Teaches users about common scam tactics
+- Call Analysis Report - Downloadable summary after each call
+- Elder-Friendly UI - Large fonts, clear warnings, simple language
+
