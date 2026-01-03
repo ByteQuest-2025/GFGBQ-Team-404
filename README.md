@@ -14,7 +14,7 @@
 📄 **Project Presentation (PPT):** 
 
 ### 👥 **Team 404**
-- Naga Gayathri Uppadhayula
+- Naga Gayathri Upadhyayula
 - Harshitha B.
 ---
 
