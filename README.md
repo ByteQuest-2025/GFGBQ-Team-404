@@ -1,127 +1,126 @@
-# 🛡️ Sentinel - Real-Time Audio Fraud Prevention
+# 🛡️ Sentinel – Real-Time Audio Fraud Prevention
 
-> **Protecting vulnerable users from phone scams through AI-powered real-time call monitoring**
+**AI-powered, real-time phone scam detection that protects users during the call, not after the damage is done.**
 
-Sentinel is an intelligent, browser-based platform that detects voice scams as they happen - protecting elderly and digitally unaware users before fraud occurs.
+Sentinel is a privacy-first, browser-based platform that detects voice scams as they happen. It is designed to protect elderly users, first-time internet users, and anyone vulnerable to social engineering attacks by providing immediate, explainable alerts during live phone calls.
 
 ---
 
-## 🚀 Hackathon Submission - ByteQuest 2025
+## Hackathon Project – ByteQuest 2025
 
-### 🔗 Quick Links
-- 🌐 **Deployed link** [Click this link to access the page](https://6959d1812dd041abfeb0f70e--sparkling-clafoutis-e9d634.netlify.app/) - Make sure to use chrome or edge browser, and allow microphone access. Click the start recording button and say something a fraudster would say to you on call and watch the risk level increase.
-- 📹 **Video Demo:** [Watch on Google Drive](https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view?usp=sharing)
-- 📊 **Presentation:** [View PPT](https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view?usp=sharing)
-- 
+### Live Demo
+**Deployed Application**  
+[Click Here](https://6959d1812dd041abfeb0f70e--sparkling-clafoutis-e9d634.netlify.app/)
 
-### 👥 Team 404
+> Use Chrome or Edge. Allow microphone access.  
+> Click **Start Protection** and speak scam-like phrases to see the risk level update in real time.
+
+### Demo & Presentation
+- **Video Demo:** [Watch on Google Drive](https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view)
+- **Presentation Deck:** [Access the PPT here](https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view)
+
+---
+
+## Team 404
 - **Naga Gayathri Upadhyayula**
 - **Harshitha B.**
 
 ---
 
-## 🎯 Problem Statement
+## Problem
 
-### The Crisis
-- 💰 **$10 billion** lost to phone scams annually
-- 📞 **68,000+** complaints filed monthly
-- 👵 **60%** of victims are elderly (65+)
-- 💸 **$9,000** average loss per victim
+Phone scams are one of the most damaging and under-addressed forms of fraud.
 
-### The Gap
-Traditional fraud detection analyzes transactions **after** they occur. Sentinel protects users **during** the call, when prevention is still possible.
+- Over **$10 billion** lost annually
+- **68,000+ complaints** every month
+- **60% of victims are elderly (65+)**
+- Average loss of **$9,000 per victim**
 
-### Who We Protect
-- Elderly individuals (65+ years)
-- First-time internet users
-- Digitally unaware populations
-- Non-native speakers
-- Anyone vulnerable to psychological manipulation
+### Why Existing Solutions Fail
+Most fraud detection systems operate *after* the transaction occurs. By that point, money and personal data are already lost.
+
+**Scams are psychological attacks, not technical ones.**  
+They must be stopped *during the conversation*.
 
 ---
 
-## 💡 Our Solution
+## Solution
 
-Sentinel monitors phone calls in real-time, instantly detecting scam patterns and alerting users before they share sensitive information or money.
+Sentinel monitors live audio through the browser microphone, converts speech to text in real time, and detects scam patterns instantly. Users receive clear warnings before they are pressured into sharing sensitive information or sending money.
+
+All processing happens locally. No audio or transcripts are stored.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🎤 Real-Time Transcription
-- Live speech-to-text using Web Speech API
-- No recording or data storage
-- Complete privacy - nothing leaves your device
+### Real-Time Speech Analysis
+- Live transcription using the Web Speech API
+- No recordings saved
+- No data leaves the device
 
-### 🧠 Dual Detection Engine
-**Pattern Matching (Instant):**
+### Dual Detection Engine
+
+**Pattern Matching Engine**
 - 20 scam categories
 - 350+ weighted keywords
-- <2ms detection speed
+- Detection latency under 2 ms
 
-**AI Enhancement (Optional):**
-- Google Gemini 1.5 Flash
-- Contextual understanding
-- Advanced threat detection
+**AI Context Analysis (Optional)**
+- Powered by Google Gemini 1.5 Flash
+- Detects intent and contextual scams
+- Used only when enabled
 
-### 📊 Visual Risk Meter
-- Real-time scoring (0-100%)
-- Color-coded alerts: Green (Safe) → Yellow (Suspicious) → Red (Scam)
-- Instant verdict updates
+### Risk Scoring System
+- Continuous score from 0–100
+- Clear visual feedback:
+  - 0–39: Safe
+  - 40–69: Suspicious
+  - 70–100: High Risk Scam
+- Score updates live as the call progresses
 
-### 🚨 20 Detection Categories
-1. 🚨 Authority Impersonation (IRS, Police, Banks)
-2. 🔐 Credential Requests (SSN, OTP, PIN, CVV)
-3. ⚠️ Threats (Arrest, Legal Action, Account Suspension)
-4. 💳 Payment Demands (Gift Cards, Wire Transfers)
-5. 🖥️ Remote Access Attempts (TeamViewer, AnyDesk)
-6. ⚡ Urgency Pressure ("Act now!", "Immediately!")
-7. 🎁 Fake Prizes (Lottery, Free Vacation)
-8. 👨‍👩‍👧 Family Emergency Scams
-9. 💼 Job Scams (Work from Home)
-10. 📈 Investment Fraud (Guaranteed Returns)
-11. 🏦 Loan Scams (Instant Approval)
-12. 📦 Delivery Scams (Package Held)
-13. ❤️ Romance Scams (Verification Fees)
-14. 🤲 Fake Charity (Donation Requests)
-15. 🤫 Secrecy Demands ("Don't tell anyone")
-16. ⚡ Utility Scams (Service Disconnection)
-17. 🚗 Warranty Scams (Extended Warranty)
-18. 💰 Money Laundering Claims
-19. 📋 Survey Scams (Paid Surveys)
-20. 🏧 Bank Verification (Account Compromised)
+### Scam Categories Detected
+- Authority impersonation (banks, police, tax offices)
+- Credential harvesting (OTP, PIN, CVV, SSN)
+- Legal and arrest threats
+- Urgency and pressure tactics
+- Payment demands (gift cards, wire transfers)
+- Remote access scams
+- Job, loan, investment, and romance scams
+- Family emergency and charity scams
+- Utility, delivery, and warranty fraud
+- Bank verification and money laundering claims
 
-### 👴 Elder-Friendly Design
-- Large fonts and clear buttons
-- Simple, jargon-free language
-- High-contrast colors
-- One-click emergency button
+### Accessibility-Focused UI
+- Large fonts and buttons
+- Simple language
+- High contrast visuals
+- One-click emergency action
 
-### 📚 Educational Components
-- Scam tactics explained
-- Real-time learning
-- Protection tips sidebar
-
-### 📄 Call Analysis
+### Explainable Alerts
+- Shows exactly *why* a call is flagged
+- Category-based threat breakdown
 - Live transcript display
-- Threat breakdown
-- Downloadable reports
+- Downloadable call summary
 
 ---
 
-## 🔒 Privacy First
+## Privacy & Security
 
-- ✅ **Zero data storage** - No localStorage, cookies, or databases
-- ✅ **Client-side only** - All processing in your browser
-- ✅ **No recording** - Audio analyzed in real-time, never saved
-- ✅ **No tracking** - No analytics or user profiling
-- ✅ **Open source** - Fully transparent and auditable
+Sentinel is built with strict privacy guarantees.
 
-**Your conversations never leave your device.**
+- No audio storage
+- No transcripts saved
+- No cookies, databases, or analytics
+- No user tracking
+- Fully client-side processing
+- Open-source and auditable
+
+**Your conversations never leave your browser.**
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 User Phone (Speakerphone)
@@ -149,169 +148,93 @@ Risk Calculation (0-100%)
 User Alerts & Warnings
 ```
 
+
 ---
 
-## 🛠️ Technology Stack
+## Tech Stack
 
 ### Frontend
 - HTML5, CSS3, JavaScript (ES6+)
-- Single-file architecture (~25KB)
-- Zero dependencies
+- Single-file implementation (~25 KB)
+- Zero external dependencies
 
-### Browser APIs (Free)
-- **Web Speech API** - Real-time transcription
-- **MediaDevices API** - Microphone access
-- **Fetch API** - Async operations
+### Browser APIs
+- Web Speech API
+- MediaDevices API
+- Fetch API
 
-### Detection Engine
-- **Pattern Matching** - 20 categories, 350+ keywords, <2ms speed
-- **AI Enhancement** - Google Gemini 1.5 Flash (Free: 60 req/min)
+### Detection
+- Keyword-based pattern engine
+- Optional AI analysis using Google Gemini 1.5 Flash
 
 ### Deployment
-- Static hosting (Netlify, Vercel, GitHub Pages)
-- HTTPS required (for microphone access)
-- Chrome/Edge browser support
+- Static hosting (Netlify / Vercel / GitHub Pages)
+- HTTPS required
+- Chrome and Edge supported
 
 ---
 
-## 📊 Performance Metrics
+## Performance
 
-- **Detection Accuracy:** 95%+ on known patterns
-- **False Positive Rate:** <5%
-- **Detection Speed:** <2ms (pattern), 2-3s (AI)
-- **Load Time:** <1 second
-- **Memory Usage:** <50MB
-- **File Size:** 25KB
+- Detection accuracy: 95%+ on known scam patterns
+- False positive rate: <5%
+- Pattern detection latency: <2 ms
+- AI analysis latency: 2–3 seconds
+- Page load time: <1 second
+- Memory usage: <50 MB
 
 ---
 
-## 🚀 Quick Start
+## Getting Started
 
-### Option 1: Download & Open
+### Run Locally
 1. Download `sentinel.html`
 2. Open in Chrome or Edge
 3. Allow microphone access
-4. Click "Start Protection"
+4. Click **Start Protection**
 
-### Option 2: Deploy Online
-See deployment instructions below ⬇️
+### Deploy
+You can deploy directly on:
+- Netlify
+- Vercel
+- GitHub Pages
 
----
-
-## 📖 How to Use
-
-1. **Open Sentinel** in Chrome/Edge browser
-2. **Click "Start Protection"** - Allow microphone access when prompted
-3. **Place phone on speaker** during suspicious calls
-4. **Watch risk meter** - Green (safe), Yellow (caution), Red (danger)
-5. **Read alerts** - Specific threats appear in real-time
-6. **Emergency button** - End call immediately if needed
-7. **Click "Stop Protection"** when call ends
+Ensure HTTPS is enabled for microphone access.
 
 ---
 
-## 🎓 How It Works
+## Use Cases
 
-### Detection Algorithm
-
-**Pattern Matching:**
-```javascript
-Text → Lowercase → Keyword Match → Weight Calculation → Risk Score
-```
-
-**Risk Scoring:**
-- 0-39%: Safe (Green)
-- 40-69%: Suspicious (Yellow)  
-- 70-100%: Scam (Red)
-
-**Example Detection:**
-```
-Input: "This is the IRS. Provide your SSN immediately or face arrest."
-
-Detected:
-- 🚨 Authority (IRS) → +35 pts
-- 🔐 Credentials (SSN) → +45 pts
-- ⚠️ Threats (arrest) → +35 pts
-- ⚡ Urgency (immediately) → +20 pts
-
-Total: 135 → Capped at 100%
-Verdict: HIGH RISK SCAM
-```
+- Personal scam protection
+- Elder care and family safety
+- Scam awareness education
+- Community centers and NGOs
+- Research on social engineering attacks
 
 ---
 
-## 🌟 Why Sentinel?
+## Future Enhancements
 
-### Real-Time Protection
-Detects threats **during** the call, not after damage is done.
-
-### Built for Everyone
-No technical knowledge required. Simple one-click operation.
-
-### Complete Privacy
-Zero data collection. All processing happens locally.
-
-### Free & Accessible
-Full protection for everyone, regardless of economic status.
-
-### Explainable AI
-Every alert shows exactly what triggered it and why.
+- Multi-language support
+- Voice tone and stress analysis
+- Browser extension
+- Mobile applications
+- Community-updated scam database
+- Caregiver and family alerts
 
 ---
 
-## 🎯 Use Cases
+## License
 
-- **Personal Protection** - Detect phone scams during live calls
-- **Elder Care** - Protect vulnerable family members
-- **Education** - Teach scam awareness through experience
-- **Research** - Study voice fraud patterns and tactics
-- **Community Service** - Deploy in senior centers and care facilities
+This project is released for social good. Free to use, modify, and distribute.
 
 ---
 
-## 🔮 Future Enhancements
+## Acknowledgments
 
-- Multi-language support (Spanish, Hindi, Chinese)
-- Voice tone analysis (emotion/stress detection)
-- Browser extension (always-on protection)
-- Mobile apps (iOS/Android)
-- Community threat database
-- Family member notifications
+Built for **ByteQuest 2025 Hackathon**
 
----
-
-## 📝 License
-
-This project is built for social good. Feel free to use, modify, and distribute to protect vulnerable users.
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Help us protect more users by:
-- Adding more scam patterns
-- Improving detection accuracy
-- Translating to other languages
-- Reporting bugs or suggestions
-
----
-
-## 📞 Contact & Support
-
-- **Issues:** [GitHub Issues](#)
-- **Email:** team@sentinel-guard.app
-- **Website:** sentinel-guard.app
-
----
-
-## 🏆 Acknowledgments
-
-Built with ❤️ for **ByteQuest 2025 Hackathon**
-
-Special thanks to:
-- Vulnerable users everywhere who inspired this project
-- Open-source community for amazing tools
-- Google for free Gemini API access
+Inspired by real scam victims and powered by the open-source community.
 
 ---
 
