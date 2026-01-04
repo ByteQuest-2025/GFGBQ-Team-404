@@ -16,8 +16,8 @@ Sentinel is a privacy-first, browser-based platform that detects voice scams as 
 > Click **Start Protection** and speak scam-like phrases to see the risk level update in real time.
 
 ### Demo & Presentation
-- **Video Demo:** [Watch on Google Drive](https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view)
-- **Presentation Deck:** [Access the PPT here](https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view)
+- **Video Demo:** [Watch on Google Drive](#)
+- **Presentation Deck:** [Access the PPT here](https://drive.google.com/file/d/1cLkC0dvzwk5qH_wky-E7WApbH1zX_jyo/view?usp=sharing)
 
 ---
 
