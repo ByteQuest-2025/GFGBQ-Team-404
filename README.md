@@ -9,9 +9,10 @@ Sentinel is an intelligent, browser-based platform that detects voice scams as t
 ## 🚀 Hackathon Submission - ByteQuest 2025
 
 ### 🔗 Quick Links
-- 🌐 **Deployed link** [Click this link to access the page](https://6959d1812dd041abfeb0f70e--sparkling-clafoutis-e9d634.netlify.app/)
+- 🌐 **Deployed link** [Click this link to access the page](https://6959d1812dd041abfeb0f70e--sparkling-clafoutis-e9d634.netlify.app/) - Make sure to use chrome or edge browser, and allow microphone access. Click the start recording button and say something a fraudster would say to you on call and watch the risk level increase.
 - 📹 **Video Demo:** [Watch on Google Drive](https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view?usp=sharing)
 - 📊 **Presentation:** [View PPT](https://drive.google.com/file/d/1MA9mIha2QagzHtgVGWOk0l_Fq8oL44Wp/view?usp=sharing)
+- 
 
 ### 👥 Team 404
 - **Naga Gayathri Upadhyayula**
