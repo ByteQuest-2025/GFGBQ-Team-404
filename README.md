@@ -142,53 +142,30 @@ No subscriptions, no premium features locked away. Full protection available to 
 
 ## 🛠️ Tech Stack
 
-### **Frontend Framework**
-- **React 18.3** - Modern UI library with hooks for state management
-- **Vite 6.0** - Lightning-fast build tool with HMR (Hot Module Replacement)
-- **JavaScript (ES6+)** - Modern syntax with arrow functions, destructuring, async/await
+### Frontend
 
-### **Styling & UI**
-- **Tailwind CSS 3.4** - Utility-first CSS framework for rapid UI development
-- **Lucide React** - Beautiful, consistent icon library (450+ icons)
-- **Custom Gradient Animations** - Dynamic color transitions based on risk levels
-- **Responsive Design** - Mobile-first approach with breakpoints
+- HTML5 + CSS3 + JavaScript (ES6+)
+- Single-file architecture (~25KB)
+- Zero dependencies, instant deployment
 
-### **Browser APIs (Zero Cost)**
-- **Web Speech API** (`webkitSpeechRecognition`) - Real-time speech-to-text transcription
-- **MediaDevices API** (`getUserMedia`) - Microphone access and audio capture
-- **Fetch API** - Optional API calls for AI enhancement
+### Browser APIs (Free)
 
-### **AI & Detection**
-- **Pattern Matching Engine** - Custom-built keyword detection algorithm
-  - 7 scam categories with weighted scoring
-  - Combo detection for dangerous patterns
-  - Sub-2ms processing time per update
-- **Google Gemini Pro** (Optional) - AI-powered context analysis
-  - Free tier: 60 requests/minute
-  - Debounced calls every 5 seconds
-  - Graceful fallback if unavailable
+- Web Speech API - Real-time transcription
+- MediaDevices API - Microphone access
+- Fetch API - Async operations
 
-### **State Management**
-- **React Hooks** (`useState`, `useEffect`, `useRef`)
-- **In-Memory Storage Only** - Zero persistence, privacy-first
-- **Cleanup on Unmount** - Proper resource management
+### Pattern Matching 
 
-### **Development Tools**
-- **ESLint** - Code quality and consistency
-- **PostCSS** - CSS processing and optimization
-- **Autoprefixer** - Automatic vendor prefixing
+- 20 scam categories
+- 350+ weighted keywords
+- <2ms detection speed
 
-### **Deployment**
-- **Netlify** (Recommended) - Drag-and-drop deployment
-- **Vercel** - Git-based continuous deployment
-- **GitHub Pages** - Free static hosting
-- **No Backend Required** - 100% client-side application
+### AI Enhancement
 
-### **Performance Optimizations**
-- **Lazy Loading** - Components load on-demand
-- **Debounced API Calls** - Prevents rate limiting
-- **Memoization** - Prevents unnecessary re-renders
-- **Code Splitting** - Vite's automatic bundle optimization
+- Google Gemini 1.5 Flash
+- Free tier: 60 req/min
+- JSON structured output
+- Risk score override capability
 
 ## 📊 Detection Algorithm
 
